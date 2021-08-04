@@ -1,0 +1,8 @@
+.idea
+node_modules
+*.iml
+target
+generator.properties
+.DS_Store
+log_dir*/
+settings.xml
