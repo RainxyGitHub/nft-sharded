@@ -34,13 +34,13 @@ contract NFTShardedFactory is Ownable {
         ERC721Template(erc721Instance).initOwner(address(this));
         ERC721Template(erc721Instance).initialize(nftName, nftSymbol, nftBaseUrl);
 
-        // create and init erc20 contract
+        // create and init OEC20 contract
         erc20Instance = Clones.clone(_erc20Template);
         ERC20Template(erc20Instance).initOwner(address(this));
         ERC20Template(erc20Instance).initialize(erc721Instance, msg.sender, erc20Name, erc20Symbol,
             erc20TotalSupply, decimals);
 
-        // mint genesis NFT to erc20 contract
+        // mint genesis NFT to OEC20 contract
         ERC721Template(erc721Instance).mint(erc20Instance, genesisTokenId);
 
         // change erc721contract owner
