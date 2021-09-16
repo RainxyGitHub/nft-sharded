@@ -1,5 +1,5 @@
-const NFTShardedFactory = artifacts.require("NFTShardedFactory");
+const ReNFTFactory = artifacts.require("ReNFTFactory");
 
 module.exports = function (deployer) {
-    deployer.deploy(NFTShardedFactory);
+    deployer.deploy(ReNFTFactory);
 };
